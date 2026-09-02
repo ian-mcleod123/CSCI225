@@ -1,23 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<h1>
-   <p>
-Welcome to My Web Page
 
-   </p> 
-</h1>
-<h2>
-<p>
-    This is a simple web page for CSCI225.
-</p>
+<head>
+    <meta charset="UTF-8">
+    <title>CSCI225 Homepage of Ian McLeod</title>
 
-</h2>
+    <!-- Connects to the separate CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
 <body>
-    <p>
-        Welcome to my page for CSCI225
 
-    </p>
-    
+    <!-- Header content goes here -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="https://www.usca.edu/">USCA</a></li>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#assignment">Assignments</a></li>
+            </ul>
+        </nav>
+    </header>
 
 
+    <!-- Main Content area -->
+    <main>
+
+        <!-- Introduction -->
+        <section id="introduction" class="introduction">
+            <h2>Introduction</h2>
+
+            <p>
+                My name is Ian McLeod and I am a college student studying
+                cybersecurity. I am interested in computers and information
+                security. I enjoy solving problems and learning about technology.
+                My goal is to graduate from college and work in cybersecurity.
+            </p>
+
+            <img src="img/myphoto.jpg" alt="My photo" width="300">
+        </section>
+
+
+        <!-- Portfolio -->
+        <section id="portfolio" class="portfolio">
+            <h2>Portfolio</h2>
+
+            <ul>
+                <li>
+                    <strong>Java Projects</strong>
+                    <p>
+                        Created Java programs using classes, objects,
+                        constructors, methods, arrays, and ArrayLists.
+                    </p>
+                </li>
+
+                <li>
+                    <strong>Python Projects</strong>
+                    <p>
+                        Created Python programs using loops, lists,
+                        functions, and basic GUI programs.
+                    </p>
+                </li>
+
+                <li>
+                    <strong>Cybersecurity Projects</strong>
+                    <p>
+                        Completed projects involving information security,
+                        risk, and cybersecurity concepts.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+
+        <!-- Schedule -->
+        <section id="schedule" class="schedule">
+            <h2>Schedule</h2>
+
+            <table>
+                <tr>
+                    <th>Course</th>
+                    <th>Day</th>
+                    <th>Time</th>
+                </tr>
+
+                <tr>
+                    <td>CSCI225</td>
+                    <td>Monday / Wednesday</td>
+                    <td>10:00 AM - 11:15 AM</td>
+                </tr>
+
+                <tr>
+                    <td>Cybersecurity</td>
+                    <td>Tuesday / Thursday</td>
+                    <td>11:00 AM - 12:15 PM</td>
+                </tr>
+
+                <tr>
+                    <td>Discrete Mathematics</td>
+                    <td>Monday / Wednesday</td>
+                    <td>1:00 PM - 2:15 PM</td>
+                </tr>
+            </table>
+        </section>
+
+    </main>
+
+
+    <!-- Sidebar area -->
+    <aside id="assignment">
+
+        <h2>Assignment</h2>
+
+        <ol>
+            <li>
+                <a href="doc/Assignment1.pdf">Assignment 1</a>
+            </li>
+
+            <li>
+                <a href="#">Assignment 2</a>
+            </li>
+
+            <li>
+                <a href="#">Assignment 3</a>
+            </li>
+        </ol>
+
+    </aside>
+
+
+    <!-- Footer area -->
+    <footer>
+
+        <address>
+            <p>Contact Information</p>
+
+            <p>
+                Email:
+                <a href="mailto:your-email@example.com">
+                    your-email@example.com
+                </a>
+            </p>
+        </address>
+
+        <p>
+            &copy; 2026 Ian McLeod
+        </p>
+
+        <!-- Three editorial/decoration tags -->
+        <p>
+            <mark>CSCI225</mark>
+            <small>Web Development</small>
+            <strong>Cybersecurity</strong>
+        </p>
+
+    </footer>
+
+</body>
 </html>
+```
