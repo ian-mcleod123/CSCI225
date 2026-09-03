@@ -2,6 +2,18 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../../CSCIA 225/workspace-html-2026/css"
+		},
+		{
+			"path": "../../CSCIA 225/workspace-html-2026/doc"
+		},
+		{
+			"path": "../../CSCIA 225/workspace-html-2026/img"
+		},
+		{
+			"path": "../../CSCIA 225/workspace-html-2026/js"
 		}
 	],
 	"settings": {}
