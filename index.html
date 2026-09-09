@@ -1,72 +1,183 @@
+```html
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>CSCI225 Homework Website</title>
-    </head>
-        <!--Header content goes here-->
-        <header>
-            <nav> Dropdown menu 
-                <ul>
-                     <li><a href="https://www.usca.edu/">USCA</a></li> 
-                     <li><a href="#schedule">Schedule</a></li>
-                     <li><a href="#assignment">Assignments</a></li>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage for Ian McLeod</title>
+</head>
+
+<body>
+
+    <!-- Header content goes here -->
+    <header>
+
+        <nav>
+            Welcome to my Homepage!
+
+            <ul>
+                <li>
+                    <a href="https://www.usca.edu/">USCA</a>
+                </li>
+
+                <li>
+                    <a href="#schedule">Schedule</a>
+                </li>
+
+                <li>
+                    <a href="#assignment">Assignments</a>
+                </li>
+
+                <li>
+                    <a href="#portfolio">Portfolio</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
 
 
-                </ul>
-            </nav>
+    <!-- Main Content area -->
+    <main>
 
-        </header>
-   
-    <!-- Main COntent area  -->
-     <main>
-        <section> <h2>introduction</h2> 
-<p>Hello my name is Ian McLeod. I am a second year computer science student working towards my degree. Some of my hobbies incude fishing, shooting, and golfing. I plan on using my Computer science degree and pairing it with a project managment certification to build data centers.</p>
-       <h2>Portrait</h2>
-			   <img src="img/portrait.png" 
-                    alt="My Photo" 
-                    width="400">
+        <!-- Introduction -->
+        <section class="introduction">
 
-         <h2>portfolio</h2></section>             
-        <p> 
-            <li>previous projects-</li>
+            <h2>Introduction</h2>
 
-        <section><h2>schedule</h2></section>
-        <table border="1"
+            <p>
+                Hello my name is Ian McLeod. I am a second year computer science
+                student working towards my degree. Some of my hobbies include
+                fishing, shooting, and golfing. I plan on using my Computer Science
+                degree and pairing it with a project management certification to
+                build data centers.
+            </p>
 
-			<tr><td colspan="4"> Course Schedule</td></tr>
-			<tr><td></td> <td>Monday</td> <td>Tuesday</td> <td>Wednseday</td><td>Thursday</td><td>Friday</td></tr>
-            <tr><td>CSCIA 225</td><td>12:00-1:15 </td><td>  </td><td>12:00-1:15 </td><td> </td><td> </td></tr>
-			<tr><td>CSCIA 220</td><td>1:30-2:45</td><td>  </td><td>1:30-2;45 </td><td> </td><td> </td></tr>
-            <tr><td>HONS A201</td><td> </td><td> </td><td> </td><td> </td><td>2:00-2:50 </td></tr>
-			
+            <h2>Portrait</h2>
+
+            <img src="IMG_E0045.JPG"
+                 alt="My Photo"
+                 width="400">
+
+        </section>
 
 
+        <!-- Portfolio -->
+        <section class="portfolio" id="portfolio">
+
+            <h2>Portfolio</h2>
+
+            <ul>
+                <li>Previous Projects-</li>
+                <li>Java Programming Projects-</li>
+                <li>Python Projects-</li>
+            </ul>
+
+        </section>
 
 
+        <!-- Schedule -->
+        <section class="schedule" id="schedule">
+
+            <h2>Schedule</h2>
+
+            <table border="1">
+
+                <tr>
+                    <td colspan="6">Course Schedule</td>
+                </tr>
+
+                <tr>
+                    <td>Course</td>
+                    <td>Monday</td>
+                    <td>Tuesday</td>
+                    <td>Wednesday</td>
+                    <td>Thursday</td>
+                    <td>Friday</td>
+                </tr>
+
+                <tr>
+                    <td>CSCIA 225</td>
+                    <td>12:00-1:15</td>
+                    <td></td>
+                    <td>12:00-1:15</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>CSCIA 220</td>
+                    <td>1:30-2:45</td>
+                    <td></td>
+                    <td>1:30-2:45</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>HONS A201</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>2:00-2:50</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+    </main>
 
 
-			</table>
-            
+    <!-- Sidebar area -->
+    <aside id="assignment">
 
+        <h2>Assignments</h2>
+
+        <ol>
+            <li>
+                <a href="doc/Assignment1.docx">
+                    Assignment 1
+                </a>
+            </li>
+
+            <li>Assignment 2</li>
+            <li>Assignment 3</li>
+        </ol>
+
+    </aside>
+
+
+    <!-- Footer area -->
+    <footer id="contact">
+
+        <address>
+
+            <p>Contact Information</p>
+
+            <p>
+                Email:
+                <a href="mailto:im11@usca.edu">
+                    im11@usca.edu
+                </a>
+            </p>
+
+        </address>
+
+        <p>
+            <small>
+                &copy; 2026 Ian McLeod. All Rights Reserved.
+            </small>
         </p>
 
-     </main>
-    
-     <!--Sidebar area-->
-     <aside>
-         <li><a href="https://usca0-my.sharepoint.com/:w:/g/personal/yilianz_usca_edu1/IQBixyyHQnBBT752D35Cs47MAad_rgJOrWzxB2y23GVQHPE?e=Ps3ZkJ"> Assignment1.docx</a></li> 
-       
-     </aside>
-     <!--footer area -- contact information copyright-->
-        <footer>
-            <p>Contact information
-                <li>Email:im11@usca.edu</li>
-            </p>
-        </footer>
+    </footer>
 
-
-    </body>
-
+</body>
 
 </html>
-
+```
