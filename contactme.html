@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Contact Me - Ian McLeod</title>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <nav>
+
+            <h1>Contact Me</h1>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                    <a href="index.html#schedule">Schedule</a>
+                </li>
+
+                <li>
+                    <a href="index.html#portfolio">Portfolio</a>
+                </li>
+
+                <li>
+                    <a href="index.html#assignment">Assignments</a>
+                </li>
+
+                <li>
+                    <a href="index.html#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Main Content -->
+
+    <main>
+
+        <!-- Video Section -->
+
+        <section>
+
+            <h2>My Video</h2>
+
+            <p>
+                Here is a video that I selected to share on my website.
+            </p>
+
+            <iframe
+                width="450"
+                height="500"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="YouTube video"
+                allowfullscreen>
+            </iframe>
+
+        </section>
+
+
+        <!-- Feedback Form -->
+
+        <section>
+
+            <h2>Website Feedback</h2>
+
+            <form name="feedback">
+
+                <!-- First Name -->
+
+                <p>
+
+                    <label for="fname">
+                        First Name:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="fname"
+                        name="fname"
+                        placeholder="anonymous"
+                        required>
+
+                </p>
+
+
+                <!-- Last Name -->
+
+                <p>
+
+                    <label for="lname">
+                        Last Name:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="lname"
+                        name="lname"
+                        placeholder="anonymous"
+                        required>
+
+                </p>
+
+
+                <!-- Email -->
+
+                <p>
+
+                    <label for="mail">
+                        Email:
+                    </label>
+
+                    <input
+                        type="email"
+                        id="mail"
+                        name="mail"
+                        placeholder="name@domain.com">
+
+                </p>
+
+
+                <!-- Recommend Website -->
+
+                <p>
+
+                    Would you recommend this website?
+
+                </p>
+
+                <p>
+
+                    <input
+                        type="radio"
+                        id="yes"
+                        name="recommend"
+                        value="yes">
+
+                    <label for="yes">
+                        Yes
+                    </label>
+
+
+                    <input
+                        type="radio"
+                        id="no"
+                        name="recommend"
+                        value="no">
+
+                    <label for="no">
+                        No
+                    </label>
+
+                </p>
+
+
+                <!-- Favorite Website -->
+
+                <p>
+
+                    <label for="favorite">
+                        Favorite Website:
+                    </label>
+
+                    <select
+                        id="favorite"
+                        name="favorite">
+
+                        <option value="google">
+                            Google
+                        </option>
+
+                        <option value="facebook">
+                            Facebook
+                        </option>
+
+                        <option value="twitter">
+                            Twitter
+                        </option>
+
+                        <option value="youtube">
+                            YouTube
+                        </option>
+
+                        <option value="other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </p>
+
+
+                <!-- Rating -->
+
+                <p>
+
+                    <label for="rating">
+                        Rate my website from 1 to 10:
+                    </label>
+
+                    <input
+                        type="range"
+                        id="rating"
+                        name="rating"
+                        min="1"
+                        max="10"
+                        value="5">
+
+                </p>
+
+
+                <!-- Additional Comments -->
+
+                <p>
+
+                    <label for="comment">
+                        Additional Comments:
+                    </label>
+
+                </p>
+
+                <p>
+
+                    <textarea
+                        id="comment"
+                        name="comment"
+                        rows="5"
+                        cols="40"
+                        placeholder="Enter your comments here"
+                        maxlength="500"></textarea>
+
+                </p>
+
+
+                <!-- Extra HTML5 Form Feature #1 -->
+
+                <p>
+
+                    <label for="visitdate">
+                        Date you visited the website:
+                    </label>
+
+                    <input
+                        type="date"
+                        id="visitdate"
+                        name="visitdate">
+
+                </p>
+
+
+                <!-- Extra HTML5 Form Feature #2 -->
+
+                <p>
+
+                    <label for="website">
+                        Your favorite website:
+                    </label>
+
+                    <input
+                        type="url"
+                        id="website"
+                        name="website"
+                        placeholder="https://example.com">
+
+                </p>
+
+
+                <!-- Extra HTML5 Form Feature #3 -->
+
+                <p>
+
+                    <label for="age">
+                        Age:
+                    </label>
+
+                    <input
+                        type="number"
+                        id="age"
+                        name="age"
+                        min="1"
+                        max="120">
+
+                </p>
+
+
+                <!-- Submit Button -->
+
+                <p>
+
+                    <input
+                        type="submit"
+                        value="Submit Feedback">
+
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <address>
+
+            <p>Contact Information</p>
+
+            <p>
+                Email:
+                <a href="mailto:im11@usca.edu">
+                    im11@usca.edu
+                </a>
+            </p>
+
+        </address>
+
+        <p>
+
+            <small>
+                &copy; 2026 Ian McLeod. All Rights Reserved.
+            </small>
+
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
