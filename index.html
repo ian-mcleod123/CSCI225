@@ -3,203 +3,179 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Homepage for Ian McLeod</title>
-    <style>
-    table {
-        border-collapse: collapse;
-    }
 
-    th, td {
-        border: 1px solid black;
-        padding: 8px;
-        text-align: center;
-    }
-
-    caption {
-        font-weight: bold;
-        margin-bottom: 8px;
-    }
-</style>
+    <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
 
-    <!-- Header content goes here -->
-    <header>
-
-        <nav>
-            <h1>Welcome to my Homepage!</h1>
-
-            <ul>
-                <li>
-                    <a href="https://www.usca.edu/">USCA</a>
-                </li>
-
-                <li>
-                    <a href="#schedule">Schedule</a>
-                </li>
-
-                <li>
-                    <a href="#assignment">Assignments</a>            
-                </li>
-
-                <li>
-                    <a href="#portfolio">Portfolio</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
+    <header class="top-header">
+        <nav class="top-nav" aria-label="Main navigation">
+            <a href="https://www.usca.edu/">USCA Website</a>
+            <a href="#assignment">Assignment Section</a>
+            <a href="contactme.html">Contact Information</a>
+            <a href="#portfolio">Google</a>
+            <a href="#schedule">GitHub Login</a>
         </nav>
-
     </header>
 
+    <main class="homepage">
 
-    <!-- Main Content area -->
-    <main>
+        <div class="tab tab-introduction">
+            <a class="tab-title" href="#introduction">Introduction</a>
 
-        <!-- Introduction -->
-        <section class="introduction">
-       
+            <section class="hover-panel" id="introduction">
+                <h2>Introduction</h2>
 
-            <h2>Introduction</h2>
+                <p>
+                    Hello, my name is Ian McLeod. I am a second-year
+                    Computer Science student working toward my degree
+                    at the University of South Carolina Aiken.
+                </p>
 
-            <p>
-                Hello my name is Ian McLeod. I am a second year computer science
-                student working towards my degree. Some of my hobbies include
-                fishing, shooting, and golfing. I plan on using my Computer Science
-                degree and pairing it with a project management certification to
-                build data centers.
-            </p>
+                <p>
+                    Some of my hobbies include fishing, shooting, and
+                    golfing. I enjoy problem solving and learning how
+                    technology works.
+                </p>
 
-            <h2>Portrait</h2>
+                <p>
+                    After college, I plan to use my Computer Science
+                    degree and pair it with a project management
+                    certification to help build data centers.
+                </p>
 
-        <img src="img/USCA.LOGO.jpeg" 
-                 alt="University of South Carolina Aiken logo"
-                 width="400">
+                <h3>Portrait</h3>
 
-        </section>
+                <img
+                    src="img/USCA.LOGO.jpeg"
+                    alt="University of South Carolina Aiken logo"
+                    class="portrait">
+            </section>
+        </div>
 
+        <div class="tab tab-portfolio">
+            <a class="tab-title" href="#portfolio">Portfolio</a>
 
-        <!-- Portfolio -->
-        <section class="portfolio" id="portfolio">
+            <section class="hover-panel" id="portfolio">
+                <h2>Portfolio</h2>
 
-            <h2>Portfolio</h2>
+                <p>
+                    This section contains my current projects and
+                    programming experience.
+                </p>
 
-            <ul>
-                <li>Previous Projects-N/A</li>
-                <li>Java Programming Projects-N/A</li>
-                <li>Python Projects-N/A</li>
-            </ul>
+                <ul>
+                    <li>Previous Projects: Not available yet</li>
+                    <li>Java Programming Projects: Not available yet</li>
+                    <li>Python Projects: Not available yet</li>
+                </ul>
+            </section>
+        </div>
 
-        </section>
+        <div class="tab tab-assignments">
+            <a class="tab-title" href="#assignment">Assignments</a>
 
+            <section class="hover-panel" id="assignment">
+                <h2>Assignments</h2>
 
-        <!-- Schedule -->
-        <section class="schedule" id="schedule">
-    <h2>Schedule</h2>
+                <ol>
+                    <li>
+                        <a href="doc/Assignment1 (1).docx">
+                            Assignment 1
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contactme.html">
+                            Contact Me
+                        </a>
+                    </li>
+                    <li>Assignment 3</li>
+                </ol>
+            </section>
+        </div>
 
-    <table>
-        <caption>Ian McLeod's Class Schedule</caption>
+        <div class="tab tab-schedule">
+            <a class="tab-title" href="#schedule">Schedule</a>
 
-        <thead>
-            <tr>
-                <th scope="col">Course</th>
-                <th scope="col">Monday</th>
-                <th scope="col">Tuesday</th>
-                <th scope="col">Wednesday</th>
-                <th scope="col">Thursday</th>
-                <th scope="col">Friday</th>
-            </tr>
-        </thead>
+            <section class="hover-panel schedule-panel" id="schedule">
+                <h2>Schedule</h2>
 
-        <tbody>
-            <tr>
-                <th scope="row">CSCIA 225</th>
-                <td>12:00–1:15</td>
-                <td></td>
-                <td>12:00–1:15</td>
-                <td></td>
-                <td></td>
-            </tr>
+                <table>
+                    <caption>Ian McLeod's Class Schedule</caption>
 
-            <tr>
-                <th scope="row">CSCIA 220</th>
-                <td>1:30–2:45</td>
-                <td></td>
-                <td>1:30–2:45</td>
-                <td></td>
-                <td></td>
-            </tr>
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Monday</th>
+                            <th>Tuesday</th>
+                            <th>Wednesday</th>
+                            <th>Thursday</th>
+                            <th>Friday</th>
+                        </tr>
+                    </thead>
 
-            <tr>
-                <th scope="row">HONS A201</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>2:00–2:50</td>
-            </tr>
-        </tbody>
-    </table>
-</section>
+                    <tbody>
+                        <tr>
+                            <th>CSCIA 225</th>
+                            <td>12:00–1:15</td>
+                            <td></td>
+                            <td>12:00–1:15</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <th>CSCIA 220</th>
+                            <td>1:30–2:45</td>
+                            <td></td>
+                            <td>1:30–2:45</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <th>HONS A201</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>2:00–2:50</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <div class="tab tab-contact">
+            <a class="tab-title" href="#contact">Contact Information</a>
+
+            <section class="hover-panel" id="contact">
+                <h2>Contact Information</h2>
+
+                <p>
+                    Email:
+                    <a href="mailto:im11@usca.edu">
+                        im11@usca.edu
+                    </a>
+                </p>
+
+                <p>
+                    <a href="contactme.html">Visit my Contact Me page</a>
+                </p>
+            </section>
+        </div>
 
     </main>
 
-
-    <!-- Sidebar area -->
-    <!-- Sidebar area -->
-
-<aside id="assignment">
-
-    <h2>Assignments</h2>
-
-    <ol>
-
-        <li>
-            <a href="doc/Assignment1 (1).docx">
-                Assignment 1
-            </a>
-        </li>
-
-        <li>
-            <a href="contactme.html">
-                Contact Me
-            </a>
-        </li>
-
-        <li>Assignment 3</li>
-
-    </ol>
-
-    </aside>
-
-
-    <!-- Footer area -->
-    <footer id="contact">
-
-        <address>
-
-            <p>Contact Information</p>
-
-            <p>
-                Email:
-                <a href="mailto:im11@usca.edu">
-                    im11@usca.edu
-                </a>
-            </p>
-
-        </address>
-
+    <footer>
         <p>
-            <small>
-                &copy; 2026 Ian McLeod. All Rights Reserved.
-            </small>
+            &copy; 2026 Ian McLeod. All Rights Reserved.
         </p>
-
     </footer>
 
 </body>
-
 </html>

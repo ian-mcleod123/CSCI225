@@ -1,0 +1,362 @@
+/* General page settings */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: #222;
+    background-image:
+    linear-gradient(rgba(255, 255, 255, 0.12),
+                    rgba(0, 0, 0, 0.30)),
+    url("../img/background.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Orange navigation bar */
+.top-header {
+    width: 100%;
+    min-height: 36px;
+    background-color: #b40f0f;
+    border-radius: 0 0 25px 25px;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.top-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 10px 15px;
+}
+
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.top-nav a:hover {
+    color: #222;
+    transform: translateY(-2px);
+    text-decoration: underline;
+}
+
+/* Main homepage layout */
+.homepage {
+    width: 100%;
+    min-height: calc(100vh - 75px);
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-items: start;
+    padding: 12px 25px 70px;
+    gap: 15px 30px;
+}
+
+/* Individual tabs */
+.tab {
+    position: relative;
+    width: 100%;
+    max-width: 340px;
+    z-index: 1;
+}
+
+.tab-title {
+    display: block;
+    position: relative;
+    padding: 10px 8px;
+    border-top: 3px solid #6599b8;
+    color: #111;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+    transition: background-color 0.5s ease,
+                color 0.5s ease,
+                border-color 0.5s ease,
+                transform 0.5s ease;
+}
+
+.tab-title:hover,
+.tab:focus-within .tab-title {
+    background-color: rgba(0, 27, 122, 0.95);
+    border-color: #160ca7;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Tab positions */
+.tab-introduction {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+}
+
+.tab-portfolio {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+}
+
+.tab-assignments {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: center;
+    justify-self: start;
+}
+
+.tab-schedule {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+    justify-self: end;
+}
+
+.tab-contact {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    justify-self: center;
+    align-self: end;
+    width: min(100%, 340px);
+}
+
+/* Information appears when hovering or using keyboard focus */
+.hover-panel {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: min(420px, 88vw);
+    max-height: 55vh;
+    overflow-y: auto;
+    padding: 18px;
+    background-color: rgba(255, 255, 255, 0.96);
+    border: 1px solid #6599b8;
+    border-radius: 12px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+    z-index: 20;
+    animation: panelAppear 0.25s ease;
+}
+
+/* Align right-side panels so they stay on screen */
+.tab-portfolio .hover-panel,
+.tab-schedule .hover-panel {
+    left: auto;
+    right: 0;
+}
+
+/* Keep the center contact panel centered */
+.tab-contact .hover-panel {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Reveal panel on hover, keyboard focus, or click-to-target */
+.tab:hover .hover-panel,
+.tab:focus-within .hover-panel,
+.hover-panel:target {
+    display: block;
+}
+
+/* Panel text */
+h2 {
+    color: #222;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px #bbb;
+}
+
+h3 {
+    color: #333;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: left;
+}
+
+p::first-letter {
+    font-size: 1.2em;
+    color: #000000;
+}
+
+ul,
+ol {
+    color: #333;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/* Custom list marker */
+.tab-portfolio ul {
+    list-style-type: square;
+}
+
+/* Links inside information panels */
+.hover-panel a {
+    color: #075a87;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.hover-panel a:hover {
+    color: #010863;
+    text-decoration: underline;
+}
+
+/* Image */
+.portrait {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin: 12px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.portrait:hover {
+    transform: scale(1.03);
+}
+
+/* Schedule table */
+.schedule-panel {
+    width: min(650px, 90vw);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: auto;
+    font-size: 12px;
+}
+
+caption {
+    font-weight: bold;
+    padding: 8px;
+}
+
+th,
+td {
+    border: 1px solid #777;
+    padding: 8px 5px;
+    text-align: center;
+    vertical-align: middle;
+    empty-cells: show;
+}
+
+th {
+    background-color: #e9e9e9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #dcebf3;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+tbody tr:hover {
+    background-color: #f9d9bc;
+}
+
+/* Box shadow for the first portfolio paragraph */
+.tab-portfolio .hover-panel p:first-of-type {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+footer {
+    position: relative;
+    width: 100%;
+    padding: 8px 12px;
+    background-color: rgba(222, 2, 16, 0.95);
+    color: white;
+    text-align: center;
+    font-size: 11px;
+}
+
+footer p {
+    margin: 4px;
+    text-align: center;
+}
+
+/* Panel animation */
+@keyframes panelAppear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+    .top-nav {
+        gap: 10px;
+    }
+
+    .top-nav a {
+        font-size: 10px;
+    }
+
+    .homepage {
+        padding: 12px 12px 45px;
+        gap: 18px 12px;
+    }
+
+    .tab-title {
+        font-size: 12px;
+    }
+
+    .hover-panel {
+        width: min(88vw, 420px);
+        max-height: 50vh;
+        padding: 12px;
+    }
+
+    .schedule-panel {
+        width: 88vw;
+        overflow-x: auto;
+    }
+
+    table {
+        font-size: 10px;
+    }
+
+    th,
+    td {
+        padding: 5px 3px;
+    }
+}
