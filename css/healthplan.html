@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BMI and Calorie Calculator</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightblue;
+            text-align: center;
+        }
+        .container {
+            background-color: white;
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        input, select {
+            padding: 8px;
+            margin: 8px;
+        }
+        button {
+            padding: 10px;
+            margin: 10px;
+            background-color: lightgreen;
+            cursor: pointer;
+        }
+        #person {
+            font-size: 100px;
+            width: 100px;
+            height: 130px;
+            margin: auto;
+            transition: width 1s, height 1s, font-size 1s;
+        }
+        #results {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <h1>BMI and Calorie Calculator</h1>
+    <h2>Enter Your Information</h2>
+    <p>
+        Weight (kg):
+        <input type="text" id="weight">
+    </p>
+    <p>
+        Height (cm):
+        <input type="text" id="height">
+    </p>
+    <p>
+        Age:
+        <input type="text" id="age">
+    </p>
+    <p>
+        Gender:
+        <select id="gender">
+            <option value="Men">Men</option>
+            <option value="Women">Women</option>
+        </select>
+    </p>
+
+    <button id="calculate">Calculate BMI and Calories</button>
+    <div id="results">
+        <h2>Your Results</h2>
+        <p id="bmiResult">BMI: </p>
+        <p id="category">Category: </p>
+        <p id="calorieResult">Calorie Target: </p>
+    </div>
+    <h2>BMI Animation</h2>
+    <div id="person">🧍</div>
+    <h2>Meal Plan Generator</h2>
+    <button id="generate">Generate Meal Plan</button>
+    <div id="mealPlan"></div>
+    <h2>Algorithm Explanation</h2>
+    <p>
+        The program uses a loop to go through the food database.
+        It randomly changes the order of the foods. It then checks
+        whether each food fits into the remaining calories.
+        If the food fits, it is added to the meal plan.
+        If it does not fit, the program skips it.
+        This makes sure the meal plan never goes over the target calories.
+    </p>
+</div>
+<script>
+
+// Food Database
+let foodDatabase = [
+    { name: "Eggs", calories: 150 },
+    { name: "Chicken Breast", calories: 250 },
+    { name: "Rice", calories: 200 },
+    { name: "Apple", calories: 95 },
+    { name: "Banana", calories: 105 },
+    { name: "Sweet Potato", calories: 180 },
+    { name: "Greek Yogurt", calories: 120 },
+    { name: "Oatmeal", calories: 150 },
+    { name: "Salad", calories: 80 },
+    { name: "Turkey Sandwich", calories: 300 },
+    { name: "Protein Shake", calories: 160 },
+    { name: "Almonds", calories: 170 }
+];
+
+let calorieTarget = 0;
+function calculate() {
+    let weight = Number(document.getElementById("weight").value);
+    let height = Number(document.getElementById("height").value);
+    let age = Number(document.getElementById("age").value);
+    let gender = document.getElementById("gender").value;
+    if (weight <= 0 || height <= 0 || age <= 0 ||
+        document.getElementById("weight").value == "" ||
+        document.getElementById("height").value == "" ||
+        document.getElementById("age").value == "") {
+        alert("Please enter valid information.");
+    }
+
+    else {
+        let bmi = weight / ((height / 100) * (height / 100));
+        let bmiRounded = bmi.toFixed(2);
+        let basicCalories = 0;
+        if (gender == "Men") {
+            basicCalories = (weight * 10) + (height * 6.25) - (age * 5) + 5;
+        }
+
+        else if (gender == "Women") {
+            basicCalories = (weight * 10) + (height * 6.25) - (age * 5) - 161;
+        }
+        calorieTarget = basicCalories;
+
+        if (bmi >= 30) {
+            calorieTarget = basicCalories - 750;
+        }
+
+        else if (bmi >= 25) {
+            calorieTarget = basicCalories - 500;
+        }
+
+        else if (bmi < 25) {
+            calorieTarget = basicCalories;
+        }
+        calorieTarget = Math.round(calorieTarget);
+        document.getElementById("bmiResult").innerHTML =
+            "BMI: " + bmiRounded;
+        document.getElementById("calorieResult").innerHTML =
+            "Calorie Target: " + calorieTarget;
+        let category = "";
+        if (bmi < 18.5) {
+            category = "Underweight";
+        }
+
+        else if (bmi < 25) {
+            category = "Normal";
+        }
+
+        else if (bmi < 30) {
+            category = "Overweight";
+        }
+
+        else {
+            category = "Obese";
+        }
+
+        document.getElementById("category").innerHTML =
+            "Category: " + category;
+        let person = document.getElementById("person");
+        if (bmi < 18.5) {
+            person.style.width = "70px";
+            person.style.height = "100px";
+            person.style.fontSize = "70px";
+        }
+
+        else if (bmi < 25) {
+            person.style.width = "100px";
+            person.style.height = "130px";
+            person.style.fontSize = "100px";
+        }
+
+        else if (bmi < 30) {
+            person.style.width = "140px";
+            person.style.height = "160px";
+            person.style.fontSize = "140px";
+        }
+
+        else {
+            person.style.width = "180px";
+            person.style.height = "190px";
+            person.style.fontSize = "180px";
+        }
+
+        document.getElementById("mealPlan").innerHTML = "";
+    }
+}
+
+
+// Generate Meal Plan
+function generateMealPlan() {
+    if (calorieTarget <= 0) {
+        alert("Please calculate your calories first.");
+    }
+
+    else {
+
+        let bestMeal = "";
+        let bestCalories = 0;
+        for (let attempt = 0; attempt < 30; attempt++) {
+            let foods = [];
+            for (let i = 0; i < foodDatabase.length; i++) {
+                foods[i] = foodDatabase[i];
+            }
+
+            for (let i = 0; i < foods.length; i++) {
+                let randomNumber = Math.floor(Math.random() * foods.length);
+                let temp = foods[i];
+                foods[i] = foods[randomNumber];
+                foods[randomNumber] = temp;
+            }
+
+            let totalCalories = 0;
+            let meal = "";
+            for (let i = 0; i < foods.length; i++) {
+                let remainingCalories = calorieTarget - totalCalories;
+                if (foods[i].calories <= remainingCalories) {
+                    totalCalories = totalCalories + foods[i].calories;
+                    meal = meal + "<p>" + foods[i].name +
+                    " - " + foods[i].calories + " calories</p>";
+                }
+                else if (foods[i].calories > remainingCalories) {
+                    // Skip this food
+                }
+            }
+            if (totalCalories > bestCalories) {
+                bestCalories = totalCalories;
+                bestMeal = meal;
+            }
+
+            else if (totalCalories <= bestCalories) {
+            }
+        }
+
+        document.getElementById("mealPlan").innerHTML =
+            "<h3>Your Meal Plan</h3>" +
+            bestMeal +
+            "<h3>Total Calories: " + bestCalories + "</h3>" +
+            "<p>Calorie Target: " + calorieTarget + "</p>";
+    }
+}
